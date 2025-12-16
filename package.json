@@ -1,0 +1,34 @@
+{
+  "name": "nodejs-youtube-downloader",
+  "version": "1.0.0",
+  "description": "NodeJS Youtube Downloader",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "yt": "./yt.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zackshdw/nodejs-youtube-downloader.git"
+  },
+  "keywords": [
+    "Youtube",
+    "Downloader"
+  ],
+  "author": "F4NK#, Naughty's Zack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zackshdw/nodejs-youtube-downloader/issues"
+  },
+  "homepage": "https://github.com/zackshdw/nodejs-youtube-downloader#readme",
+  "dependencies": {
+    "bgutils-js": "^3.2.0",
+    "cli-progress": "^3.12.0",
+    "googlevideo": "^4.0.4",
+    "jsdom": "^27.2.0",
+    "youtubei.js": "^16.0.1"
+  }
+}

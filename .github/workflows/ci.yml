@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run help command
+      run: node yt.js help
+
+    - name: Run url information
+      run: node yt.js info "https://www.youtube.com/watch?v=n1PCW0C1aiM"
+
+    - name: Run video download
+      run: node yt.js download "https://www.youtube.com/watch?v=n1PCW0C1aiM" -q 360p
+
+    - name: Run audio download
+      run: node yt.js download "https://www.youtube.com/watch?v=n1PCW0C1aiM" -q AUDIO_QUALITY_MEDIUM
